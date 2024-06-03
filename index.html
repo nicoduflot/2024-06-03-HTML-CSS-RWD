@@ -7,6 +7,14 @@
     <meta name="keywords" content="DAWAN, Formation, HTML, CSS, Responsive web design" />
     <title>Formation HTML CSS RWD - DAWAN</title>
     <!-- on va ajouter à la suite les appel vers les feuillets CSS -->
+    <style>
+        /* classe créée pourl'exemple de span de texte modifié */
+        .rouge-gras{
+            color: darkred;
+            font-family: Impact;
+            font-size: larger;
+        }
+    </style>
     <!-- on va ajouter à la suite les appel vers les scripts javascript -->
 </head>
 <body>
@@ -30,7 +38,7 @@
                 <b>Table des matières</b>
                 <ol type="I">
                     <li><a href="#balises-contenu" title="Aller à la partie 'Balises de contenu texte'">Les balises de contenu texte</a></li>
-                    <li><a href="" title="">Les balises sur le texte</a></li>
+                    <li><a href="#balises-texte" title="">Les balises sur le texte</a></li>
                     <li><a href="" title="">Les problèmes courant en CSS</a></li>
                 </ol>
             </aside>
@@ -38,7 +46,7 @@
         <section>
             <article>
                 <header>
-                    <h2 id="#balises-contenu">HTML : Les balises de contenu texte</h2>
+                    <h2 id="balises-contenu">HTML : Les balises de contenu texte</h2>
                 </header>
                 <!-- 
                     une liste des caractères spéciaux en HTML
@@ -49,6 +57,62 @@
                 </p>
                 <p>
                     Si j'enchaîne les paragraphes, ils seront "naturellements" séparés.
+                </p>
+                <p>
+                    Les listes sont équivalentes à des paragraphes : 
+                </p>
+                <ul>
+                    <li>élément 1</li>
+                    <li>élément 2</li>
+                    <li>élément 3</li>
+                </ul>
+                <blockquote>
+                    La balise <code>blockquote</code> permet de mettre en exergue de citation un texte.
+                </blockquote>
+                <pre>Lorem ipsum dolor sit 
+amet consectetur adipisicing 
+elit. Est itaque dignissimos 
+placeat sunt modi! Sequi 
+aspernatur reprehenderit 
+esse reiciendis vitae 
+debitis expedita, amet 
+dolor. Fugiat omnis 
+minima praesentium 
+quod est.</pre>
+            </article>
+            <article>
+                <header>
+                    <h2 id="balises-texte">Les balises sur le texte</h2>
+                </header>
+                <p>
+                    Sur la mise en forme du texte, il faudra faire attention, on peut utiliser plusieurs balises qui affichent le même résultat mais certaines d'entres elles on une influence sur le SEO. Par exemple la balise <b>b affiche le texte engras</b>, mais il est aussi possible d'utilser pour cela la balise <strong>strong</strong>.<br />
+                    Il existe la même différence entre la balise <i> i pour l'italique</i> et la balise <em> em, qui affiche en italique mais induit le fait de mettre de l'emphase sur l'importnce SEO de ce qu'elle contient</em>
+                </p>
+                <p>
+                    Pour avoir tous les éléments d'une citation, il faut ajouter, dans la balise blockquote : 
+                </p>
+                <ul>
+                    <li>La balise q qui délimitera la citation</li>
+                    <li>La balise cite qui elle délimitera l'origine de la citation</li>
+                </ul>
+                <blockquote>
+                    <q>I'm Batman</q><br />
+                    <cite>Bruce Wayne</cite>
+                </blockquote>
+                <p>
+                    Une balise a été rendue obsolète, <font color="#be0000" face="impact" size="5">elle permettait de changer</font> la couleur, la police et la taille d'une zone de texte, la balise font. Elle est dépréciée, a ne plus utiliser mais elle est encore, pour l'instant (juin 2024) interprêtée par les navigateurs.
+                </p>
+                <p>
+                    Pour agir de la même façon, on créera plutôt une classe CSS, que l'on ajoutera à une balise span, <span class="rouge-gras">span est une balise qui permet tout simplement d'entourer un groupe de mot et d'y appliquer une classe CSS</span>.
+                </p>
+                <p>
+                    H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <small>Dignissimos aliquid recusandae</small> error nam assumenda nesciunt ipsa fuga. Fuga provident reiciendis, aut consectetur minima deserunt molestias voluptatem, laboriosam quo atque ratione?
+                </p>
+                <p>
+                    En HTML, on ne <u>souligne pas du contenu</u>, car la majorité des personne pourraient penser que c'est un lien hypertexte qui ne marche pas. Il est préférable de soit changer sa couleur, <mark>soit le surligner au marker fluo</mark>. Il est possible aussi de <s>biffer</s> du texte.
                 </p>
             </article>
         </section>
