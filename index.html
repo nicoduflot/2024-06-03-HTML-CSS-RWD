@@ -30,6 +30,7 @@
             <ul>
                 <li><a href="./index.html" title="Page d'accueil" target="_self">Accueil</a></li>
                 <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024" target="_blank">Promo</a></li>
+                <li><a href="./media.html" title="Les media en html" target="_self">Les media</a></li>
                 <li><a href="./contact.html" title="Accès au formulaire de contact" target="_self">Contact</a></li>
             </ul>
         </div>
@@ -172,11 +173,23 @@ quod est.</pre>
             <nav>
                 <h4>Partenaires</h4>
                 <ul>
-                    <li><a href="#" title="lien 1">Lien 1</a></li>
-                    <li><a href="#" title="lien 2">Lien 2</a></li>
+                    <li><a href="#" title="lien 1" id="test">Lien 1</a></li>
+                    <li><a href="#" title="lien 2" id="test2">Lien 2</a></li>
                     <li><a href="#" title="lien 3">Lien 3</a></li>
                     <li><a href="#" title="lien 4">Lien 4</a></li>
                 </ul>
+                <script>
+                    const test = document.getElementById('test');
+                    test.addEventListener('click', function(event){
+                        event.preventDefault();
+                        console.log('coucou');
+                    });
+                    const test2 = document.getElementById('test2');
+                    test2.addEventListener('click', function(event){
+                        event.preventDefault();
+                        alert('vous avez cliqué sur un lien');
+                    });
+                </script>
             </nav>
         </div>
     </footer>
