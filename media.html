@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,11 +8,12 @@
     <meta name="keywords" content="DAWAN, Formation, HTML, CSS, Responsive web design" />
     <title>Formation HTML CSS RWD - DAWAN</title>
     <!-- on va ajouter à la suite les appel vers les feuillets CSS -->
-    
+
     <link rel="stylesheet" href="./css/style.css" media="screen" />
     <link rel="stylesheet" href="./css/print.css" media="print" />
     <!-- on va ajouter à la suite les appel vers les scripts javascript -->
 </head>
+
 <body>
     <header>
         <div>
@@ -22,7 +24,8 @@
         <div>
             <ul>
                 <li><a href="./index.html" title="Page d'accueil" target="_self">Accueil</a></li>
-                <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024" target="_blank">Promo</a></li>
+                <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024"
+                        target="_blank">Promo</a></li>
                 <li><a href="./media.html" title="Les media en html" target="_self">Les media</a></li>
                 <li><a href="./contact.html" title="Accès au formulaire de contact" target="_self">Contact</a></li>
             </ul>
@@ -33,7 +36,7 @@
             <aside>
                 <b>Table des matières</b>
                 <ol type="I">
-                    
+
                 </ol>
             </aside>
         </section>
@@ -47,18 +50,23 @@
                 </p>
                 <h3>img</h3>
                 <p>
-                    img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par exemple, sa largeur, la hauteur qui le ratio (l'homothétie, le rapport hauter / largeur)
+                    img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa place.
+                    Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par exemple,
+                    sa largeur, la hauteur qui le ratio (l'homothétie, le rapport hauter / largeur)
                 </p>
                 <p>
                     img peut être appelé dans et hors paragraphe.
-                    <img src="./images/doc-signal-200w.png" alt="Portrait dans le style synthwave du personnage Doc Emmet Brown, de la série de films retour vers le futur. Le créateur de l'image : James White" />
+                    <img src="./images/doc-signal-200w.png"
+                        alt="Portrait dans le style synthwave du personnage Doc Emmet Brown, de la série de films retour vers le futur. Le créateur de l'image : James White" />
                 </p>
                 <p>
-                    <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="image fond d'écran inspiration fallout 4 le jeu vidéo" />
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg"
+                        alt="image fond d'écran inspiration fallout 4 le jeu vidéo" />
                 </p>
                 <h3>picture</h3>
                 <p>
-                    La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour de l'image afficher, on peut sélectionner la même image avec des formats différents.
+                    La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible
+                    autour de l'image afficher, on peut sélectionner la même image avec des formats différents.
                 </p>
                 <p>
                     <picture>
@@ -69,16 +77,21 @@
                 </p>
                 <h3>Figure</h3>
                 <p>
-                    Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une légende, avec la balise figcaption.
+                    Il existe une balise conteneur pour les media, qui aide la sémantique web pour le référencement et
+                    l'accessibilité. la balise figure va encadrer un media, et donne la possibilité d'y ajouter une
+                    légende, avec la balise figcaption.
                 </p>
                 <figure>
-                    <img src="./images/james-white-composite-400w.png" alt="image composite de plusieurs images de l'artiste James White, dans le style synthwave" />
+                    <img src="./images/james-white-composite-400w.png"
+                        alt="image composite de plusieurs images de l'artiste James White, dans le style synthwave" />
                     <figcaption>
-                        L'artiste James White produit des illustration numérique largement inspirée du style des affiche de films des années 80.
+                        L'artiste James White produit des illustration numérique largement inspirée du style des affiche
+                        de films des années 80.
                     </figcaption>
                 </figure>
                 <p>
-                    La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le référencement.
+                    La légende sera rattachée sémantiquement à l'image et son texte alternatif, ce qui améliorera le
+                    référencement.
                 </p>
             </article>
             <article>
@@ -86,6 +99,60 @@
                     <h2>L'audio</h2>
                 </header>
                 <h3>L'audio hébergé sur le site</h3>
+                <p>
+                    Pour mettre à disposition un fichier audio sur un site, on utlise la balise audio.
+                    Cette balise peut soit appeler un seul fichier, ou utliser aussi la balise source, déjà vu associée
+                    à la balise picture.
+                    Utiliser plusieurs source permet de s'adapter à la configuration de l'utilisateur. Un appareil, pour
+                    lire un fichier audio (ou vidéo) doit posséder les bon codecs. si je met a disposition un fichier
+                    avec une extension que l'appareil qui essai de le jouer ne connaît, j'aurais une erreur.
+                    Si je propose le même son dans des format différent avec source, l'appareil lancera le premier
+                    fichier qu'il est capable de lire.
+                </p>
+                <figure>
+                    <audio controls id="diablo">
+                        <source src="./media/audio/diablo_town.ogg" type="audio/ogg" />
+                        <source src="./media/audio/diablo_town.mp3" type="audio/mp3" />
+                    </audio>
+                    <figcaption>
+                        Lire le fichier<br />
+                        <button id="playAudio" data-target="diablo">Play</button>
+                        <button id="pauseAudio" data-target="diablo">Pause</button>
+                    </figcaption>
+                    <script>
+                        const play = document.getElementById('playAudio');
+                        const pause = document.getElementById('pauseAudio');
+                        play.addEventListener('click', function () {
+                            document.getElementById(play.dataset.target).play();
+                        });
+                        pause.addEventListener('click', function () {
+                            document.getElementById(play.dataset.target).pause();
+                        });
+                    </script>
+                </figure>
+                <h3>L'audio hébergé sur un site tiers</h3>
+                <p>
+                    Les média audio (et aussi les vidéos) hébergés sur des site tiers, quand elles partageable, le sont grâce au princope des iframes.  L'iframe est un cadre quio permet d'appeler une autre ressource, comme par exemple une page web.
+                </p>
+                <iframe width="90%" height="200px" src="./landings/promo-summer-2024.html"></iframe>
+                <p>
+                    Comme l'iframe appel un page html, cette page contient le fichier audio et un lecteur, dans même esprit que celui qu'on a créé précédement.
+                </p>
+                <h4>Soundcloud</h4>
+                <p>
+                    partageons l'album qui se trouve à cette <a href="https://soundcloud.com/lizzomusic" target="_blank">adresse</a>
+                </p>
+                <figure>
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465583221&color=%23167142&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <figcaption style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                        <a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank" style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a href="https://soundcloud.com/lizzomusic/sets/special-387954109" title="Special" target="_blank" style="color: #cccccc; text-decoration: none;">Special</a>
+                    </figcaption>
+                </figure>
+                <h5>l'iframe</h5>
+                <p>
+                    L'iframe permet pas mal d'autre petits trucs
+                </p>
+                
             </article>
         </section>
     </main>
@@ -97,8 +164,10 @@
             <nav>
                 <h4>Liens utiles</h4>
                 <ul>
-                    <li><a href="https://nouvelle-techno.fr/articles/utiliser-emmet-pour-accelerer-le-developpement" target="_blank" title="Utiliser l'abrévation Emmet">Emmet abreviation</a></li>
-                    <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank" title="Documentation CSS sur le mdn ">CSS MDN</a></li>
+                    <li><a href="https://nouvelle-techno.fr/articles/utiliser-emmet-pour-accelerer-le-developpement"
+                            target="_blank" title="Utiliser l'abrévation Emmet">Emmet abreviation</a></li>
+                    <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"
+                            title="Documentation CSS sur le mdn ">CSS MDN</a></li>
                 </ul>
             </nav>
             <nav>
@@ -111,12 +180,12 @@
                 </ul>
                 <script>
                     const test = document.getElementById('test');
-                    test.addEventListener('click', function(event){
+                    test.addEventListener('click', function (event) {
                         event.preventDefault();
                         console.log('coucou');
                     });
                     const test2 = document.getElementById('test2');
-                    test2.addEventListener('click', function(event){
+                    test2.addEventListener('click', function (event) {
                         event.preventDefault();
                         alert('vous avez cliqué sur un lien');
                     });
@@ -125,4 +194,5 @@
         </div>
     </footer>
 </body>
+
 </html>
