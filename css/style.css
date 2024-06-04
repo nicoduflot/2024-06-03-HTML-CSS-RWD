@@ -95,6 +95,9 @@ si on importe du css, cela doit faire partie des premières déclaration dans le
 :root{
     --main-font: Arial, Helvetica, sans-serif;
     --heading-font: sans-serif;
+    --main-body-color: #212529;
+    --header-bg-color: #212529;
+    --header-color: white;
     font-size: 1.2rem;
     line-height: 1.7rem;
 }
@@ -111,10 +114,13 @@ si on importe du css, cela doit faire partie des premières déclaration dans le
 
 body{
     font-family: var(--main-font);
+    margin: 0;
+    color: var(--main-body-color);
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
+    margin: 0;
 }
 
 /* déclarations de classes */
@@ -153,3 +159,43 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* déclaration selon la structure du HTML */
+
+body > header, 
+body > nav, 
+body > footer{
+    background-color: var(--header-bg-color);
+    color: var(--header-color);
+}
+
+body > header > div,
+body > footer > div{
+    padding: 1rem;
+}
+
+body > nav > div{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+body > nav ul{
+    margin: 0;
+    line-height: 2rem;
+    list-style-type: none;
+    padding: 0;
+}
+
+body > nav ul li:not(body > nav ul li:last-child){
+    border-bottom: 1px solid var(--header-color);
+}
+
+body > nav a, 
+body > nav a:visited{
+    color: var(--header-color);
+    display: block;
+    text-decoration: none;
+}
+
+body > main{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
