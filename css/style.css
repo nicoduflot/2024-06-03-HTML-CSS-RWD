@@ -177,7 +177,8 @@ body > nav > div{
     padding-right: 1rem;
 }
 
-body > nav ul{
+body > nav ul,
+body > footer ul {
     margin: 0;
     line-height: 2rem;
     list-style-type: none;
@@ -189,7 +190,9 @@ body > nav ul li:not(body > nav ul li:last-child){
 }
 
 body > nav a, 
-body > nav a:visited{
+body > nav a:visited,
+body > footer a, 
+body > footer a:visited{
     color: var(--header-color);
     display: block;
     text-decoration: none;
