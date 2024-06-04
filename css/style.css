@@ -142,4 +142,14 @@ h1, h2, h3, h4, h5, h6{
     margin: 1rem;
 }
 
+.deuxEm{
+    font-size: 2em;
+    padding: 20px;
+}
+
+.deuxRem{
+    font-size: 2rem;
+    padding: 20px;
+}
+
 /* déclaration selon la structure du HTML */
