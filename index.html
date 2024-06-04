@@ -56,7 +56,7 @@
                 <p>
                     Les texte doit toujours être contenu dans une balise paragraphe ou une balise similaire (je les appel des balise de type paragraphe).
                 </p>
-                <p>
+                <p id="special">
                     Si j'enchaîne les paragraphes, ils seront "naturellements" séparés.
                 </p>
                 <p>
@@ -125,6 +125,21 @@ quod est.</pre>
                     En web, pour l'accessibilité et la facilité de lecture, on évite les polices avec empatement (ex : Times New Roman ou police serif), on préfèrera les polices sans empatement ( Arial, Roboto, calibri ou police sans-serif).
                 </p>
                 <h3>une histoire d'unité</h3>
+                <p>
+                    Les tailles des éléments sont définis par défaut sur le contenu des éléments, c'est à dir que si je définie une div de 200px de large, avec une marge intérieure de 10px et une bordure de 1px
+                    de large, la place totale de l'élément sur l'écran sera de :
+                    200px + 10px + 10px + 1px + 1px (contenu + marge intérieur gauche + marge intérieur droite +
+                    largeur bordure à gauche + largeur bordure à droite ) => 222px.<br />
+                    c'est la propriété css box-sizing qui est à 'content-box' par défaut.<br />
+                    Pour éviter cela, on appliquera 'border-box' à tous les éléments grace au caractère spécial *
+                    dans la déclaration CSS.
+                </p>
+                <div class="content-box">
+                    
+                </div>
+                <div class="border-box">
+
+                </div>
             </article>
         </section>
     </main>

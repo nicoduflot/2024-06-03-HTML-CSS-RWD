@@ -20,8 +20,78 @@ Unités les plus souvent utilisées en web
 px          =>  pixel (il est possible d'avoir des chiffres à virgule 23.5px; )
 em          =>  cadratin. Historiquement unité de mesure en print sur les presses.
                 Le cadratin se calcul par rapport à la taille du parent
+rem         => cadratin racine, lui se calculera toujours depuis la taille racine du cadratin, 
+                - soit celle du navigateur 
+                - soit celle surchargée dans le :root
+%           => la taille définie en % se calcul par rapport à l'espace disponible
+vw & vh     =>  vw : viewport width (largeur de la surface d'affichage du site)
+                vh : viewport height ( hauteur d'affichage du site)
+                50vh => 50% de la taille d'affichage du site
+                si la largeur d'affichage du site 360px (100vw)
+                50vw = 180px
+
+sélecteur CSS :
+    ATTENTION : en CSS, on impacte tous les éléments correspondants aux sélecteurs écrits
+    
+    sélecteurs simples : balise, identifiant et par classe
+        p                   => tous les éléments p rencontrés dans le document
+                            pas de caractère spécial devant l'élément donc il s'agit d'une balise
+        #special            => l'élément ayant comme attribut id="special"
+                            le caractère # indique qu'on se réfère à l'id
+                            => les id sont uniques dans la page
+        .titreDeChapitre    => les éléments ayant au moins la class="titreDeChapitre" 
+                            le caractère . indique qu'on se réfère à une classe
+                            => ATTENTION : si un élément class="titreDeChapitre toto tata" comme il possède au moins
+                            la classe titreDeChapitre alors il sera trouvé
+    Sélecteur avancés : selon les attributs                                  
+        [data-test]                     => les éléments ayant au moins un attribut nommé data-test
+                                        <span data-test="tata"></span>
+                                        <span data-test="toto"></span>
+                                        => les deux sont impacté, on ne recherche que l'attribut
+        [alt]                           => les éléments ayant au moins un attribut alt
+        [data-test="toto"]              => les éléments ayant au moins un attribut nommé data-test="toto"
+                                        <span data-test="tata"></span>
+                                        <span data-test="toto"></span>
+                                        seul l'élément dont l'attribut data-test est égal à toto sera impacté
+        [data-col][data-line]           => les éléments ayant au moins un attribut data-col ET un attribut data-line
+        [data-col="3"][data-line]       => les éléments ayant au moins un attribut data-col="3" ET un attribut                          data-line
+        [data-col][data-line="2"]       => les éléments ayant au moins un attribut data-col ET un attribut data-line="2"
+        [data-col="3"][data-line="2"]   => les éléments ayant au moins un attribut data-col="3" ET un attribut data-line="2"
+
+    Sélecteur avancés : mélange des sélecteurs simples et ou de sélecteurs avancés
+        h3.titreDeChapitre  => tous les titre h3 ayant la classe titreDeChapitre
+                            si l'élément et la classe sont collés, c'est que l'élément doit avoir au moins cette classe
+        article #special    => un élément avec id="special" enfant direct OU indirect d'un élément article
+                            si l'élément et l'id recherché sont séparés, cela indique une filiation directe ou indirecte
+        article > p            => tous les éléments p enfants directs d'un élément main
+                            le chevron fermant > entre les deux éléments indique une filiation directe.
+        p#special           => un élément p avec id="special"
+        .toto.tata          => un élément ayant au moins les deux classes suivantes toto et tata
+        .toto .tata         => un élément ayant au moins la classe tata enfant direct ou indirect d'un élément ayant au moins la classe toto
+    
+    Pseudo sélecteurs (sélécteur qui permet des "tri" ou des "filtres" sur des sélecteurs )
+        p:nth-of-type(odd)  => tous les paragraphes du document en position impaire
+                            nth-child() le(s) nième(s) enfant(s)
+                            les paramètres : 
+                                odd => impaire - event => paire, Xn => tous les X enfants , Y => le Yème
+                                Xn + Y, si X == 2 et Y == 1 ==> 2n+1
+
+        article:last-child:nth-of-type(4n+3)    => l'article doit être le dernier article et le troisième article d'une ligne de 4
+                                                paramètres :    4n => le nombre d'élément par ligne
+                                                                +3 => le troisième de la ligne
 
 */
+
+/* 
+Il est possible d'importer des feuillets css dans d'autres feuillets css 
+si on importe du css, cela doit faire partie des premières déclaration dans le feuillet css courant
+
+@import './chemin vers le fichier css a importer';
+
+*/
+
+
+/* déclaration des éléments du :root */
 :root{
     --main-font: Arial, Helvetica, sans-serif;
     --heading-font: sans-serif;
@@ -29,13 +99,47 @@ em          =>  cadratin. Historiquement unité de mesure en print sur les press
     line-height: 1.7rem;
 }
 
+/* déclarations générales */
+
+/* le sélecteur * permet d'atteindre tous les éléments de la page sans exception */
+
+*{
+    box-sizing: border-box;
+}
+
 /* pour "atteindre" en CSS une balise, on écrit simplement son nom */
 
 body{
     font-family: var(--main-font);
-
 }
 
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
 }
+
+/* déclarations de classes */
+
+#special{
+    /* l'élément possèdant l'attribut id unique contenant "special" sera seul impacté par le css écrit */
+    font-weight: bold;
+}
+
+.content-box{
+    box-sizing: content-box;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 1rem;
+}
+
+.border-box{
+    box-sizing: border-box;
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 1rem;
+}
+
+/* déclaration selon la structure du HTML */
