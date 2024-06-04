@@ -42,7 +42,31 @@
                 <header>
                     <h2>Les images</h2>
                 </header>
-                
+                <p>
+                    Les images peuvent être affichées à l'aide de deux balise : img et picture
+                </p>
+                <h3>img</h3>
+                <p>
+                    img est une balise qui une fois écrite, va aller chercher l'image source et l'afficher à sa place. Si rien d'autre n'est précisé, l'image s'affiche à sa taille originale. Si on change, par exemple, sa largeur, la hauteur qui le ratio (l'homothétie, le rapport hauter / largeur)
+                </p>
+                <p>
+                    img peut être appelé dans et hors paragraphe.
+                    <img src="./images/doc-signal-200w.png" alt="Portrait dans le style synthwave du personnage Doc Emmet Brown, de la série de films retour vers le futur. Le créateur de l'image : James White" />
+                </p>
+                <p>
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" alt="image fond d'écran inspiration fallout 4 le jeu vidéo" />
+                </p>
+                <h3>picture</h3>
+                <p>
+                    La balise picture permet de faire de l'affichage d'image adaptatif : selon la taille disponible autour de l'image afficher, on peut sélectionner la même image avec des formats différents.
+                </p>
+                <p>
+                    <picture>
+                        <source srcset="./images/doc-signal-394w.png" media="(min-width: 600px)" />
+                        <source srcset="./images/doc-signal-250w.png" media="(min-width: 400px)" />
+                        <img src="./images/doc-signal-200w.png" alt="..." />
+                    </picture>
+                </p>
             </article>
         </section>
     </main>
