@@ -132,20 +132,29 @@
                 </figure>
                 <h3>L'audio hébergé sur un site tiers</h3>
                 <p>
-                    Les média audio (et aussi les vidéos) hébergés sur des site tiers, quand elles partageable, le sont grâce au princope des iframes.  L'iframe est un cadre quio permet d'appeler une autre ressource, comme par exemple une page web.
+                    Les média audio (et aussi les vidéos) hébergés sur des site tiers, quand elles partageable, le sont
+                    grâce au princope des iframes. L'iframe est un cadre quio permet d'appeler une autre ressource,
+                    comme par exemple une page web.
                 </p>
                 <iframe width="90%" height="200px" src="./landings/promo-summer-2024.html"></iframe>
                 <p>
-                    Comme l'iframe appel un page html, cette page contient le fichier audio et un lecteur, dans même esprit que celui qu'on a créé précédement.
+                    Comme l'iframe appel un page html, cette page contient le fichier audio et un lecteur, dans même
+                    esprit que celui qu'on a créé précédement.
                 </p>
                 <h4>Soundcloud</h4>
                 <p>
-                    partageons l'album qui se trouve à cette <a href="https://soundcloud.com/lizzomusic" target="_blank">adresse</a>
+                    partageons l'album qui se trouve à cette <a href="https://soundcloud.com/lizzomusic"
+                        target="_blank">adresse</a>
                 </p>
                 <figure>
-                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465583221&color=%23167142&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-                    <figcaption style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-                        <a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank" style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a href="https://soundcloud.com/lizzomusic/sets/special-387954109" title="Special" target="_blank" style="color: #cccccc; text-decoration: none;">Special</a>
+                    <iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay"
+                        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465583221&color=%23167142&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                    <figcaption
+                        style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+                        <a href="https://soundcloud.com/lizzomusic" title="Lizzo" target="_blank"
+                            style="color: #cccccc; text-decoration: none;">Lizzo</a> · <a
+                            href="https://soundcloud.com/lizzomusic/sets/special-387954109" title="Special"
+                            target="_blank" style="color: #cccccc; text-decoration: none;">Special</a>
                     </figcaption>
                 </figure>
                 <h5>l'iframe</h5>
@@ -156,10 +165,13 @@
                     <li><a href="./documents/CRAM.pdf" target="document">fichier CRAM</a></li>
                     <li><a href="./documents/books.xml" target="document">fichier xml</a></li>
                     <li><a href="./documents/fichier.txt" target="document">fichier txt</a></li>
-                    <li><a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465583221&color=%23167142&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" target="document">Album Lizzo</a></li>
+                    <li><a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465583221&color=%23167142&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+                            target="document">Album Lizzo</a></li>
                 </ul>
-                <div class="video a-4-portrait">
-                    <iframe frameborder="no" name="document" width="80%" height="400px" src="./documents/CRAM.pdf"></iframe>
+                <div style="max-width: 600px;">
+                    <div class="video a-4-portrait">
+                        <iframe frameborder="no" name="document" src="./documents/CRAM.pdf"></iframe>
+                    </div>
                 </div>
             </article>
             <article>
@@ -171,7 +183,8 @@
                     La balise video se comporte quasiement de la même façon que la balise audio
                 </p>
                 <figure>
-                    <video controls muted src="./media/video/Fallout-4-Launch-Trailer.mp4" poster="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg"></video>
+                    <video controls muted src="./media/video/Fallout-4-Launch-Trailer.mp4"
+                        poster="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg"></video>
                 </figure>
                 <figure>
                     <video controls>
@@ -182,19 +195,26 @@
                 <h3>Les vidéos hébergées sur un site tiers</h3>
                 <h4>Youtube</h4>
                 <p>
-                    Les vidéo hébergées posent souvent une défi : les tailles de l'iframe sont bloquée pour pouvoir profiter du ratio de la vidéo (16 / 9, ou du 4 / 3).
-                    Il faut créer des classes CSS particulières pour pouvoir ajouter des vidéos via iframe qui gardent leur ratio tout en étant adaptatives.
+                    Les vidéo hébergées posent souvent une défi : les tailles de l'iframe sont bloquée pour pouvoir
+                    profiter du ratio de la vidéo (16 / 9, ou du 4 / 3).
+                    Il faut créer des classes CSS particulières pour pouvoir ajouter des vidéos via iframe qui gardent
+                    leur ratio tout en étant adaptatives.
                 </p>
-                <figure>
-                    <div class="video video-16-9">
-                        <iframe   src="https://www.youtube.com/embed/5e5Pz7wnsFs?si=BRNRJfs7yyZGD9L0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </div>
-                    <figcaption>
-                        Musique cool pour travailler
-                    </figcaption>
-                </figure>
-                </article>
-            </section>
+                <div style="max-width: 600px;">
+                    <figure>
+                        <div class="video video-16-9">
+                            <iframe src="https://www.youtube.com/embed/5e5Pz7wnsFs?si=BRNRJfs7yyZGD9L0"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <figcaption>
+                            Musique cool pour travailler
+                        </figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
     </main>
     <footer>
         <div>
