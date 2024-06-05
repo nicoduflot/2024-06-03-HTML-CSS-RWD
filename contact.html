@@ -74,8 +74,95 @@
                     Si action n'est pas précisé, le formulaire considère que c'est la page où il
                     se trouve qui sera la page de traitement.
                 </p>
-                <form method="get" accept="./contact.html">
-                    
+                <form id="contact-form" method="get" accept="./contact.html">
+                    <fieldset>
+                        <legend>
+                            Informations de contact
+                        </legend>
+                        <p>
+                            <label for="nom">Nom : </label>
+                            <input type="text" name="nom" id="nom" placeholder="Votre nom" aria-describedby="info-nom" required autofocus />
+                        </p>
+                        <div class="info-form" id="info-nom">
+                            Ce champ doit contenir votre nom de famille d'usage, il est obligatoire.
+                        </div>
+                        
+                        <p>
+                            <label for="prenom">Prénom : </label>
+                            <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" aria-describedby="info-prenom" />
+                        </p>
+                        <div class="info-form" id="info-prenom">
+                            Ce champ doit contenir votre prénom d'usage, il n'est, pas obligatoire.
+                        </div>
+
+                        <p>
+                            <label for="nom">Email : </label>
+                            <input type="email" name="email" id="email" placeholder="Votre email" aria-describedby="info-email" required pattern="^[\w\-\+]+(\.[\w\-]+)*@[\w\-]+(\.[\w\-]+)*\.[\w\-]{2,15}$" />
+                        </p>
+                        <div class="info-form" id="info-email">
+                            Ce champ doit contenir votre email, il est obligatoire.
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Type de la demande</legend>
+                        <p>
+                            <label for="type-demande">Type de la demande : </label>
+                            <select name="type-demande" id="type-demande" aria-describedby="info-type-demande">
+                                <option value="" selected>Choisir un type de demande</option>
+                                <optgroup label="Options unitaires">
+                                    <option value="1">Opt 1</option>
+                                    <option value="2">Opt 2</option>
+                                    <option value="3">Opt 3</option>
+                                    <option value="4">Opt 4</option>
+                                    <option value="5">Opt 5</option>
+                                </optgroup>
+                                <optgroup label="Toutes les options sauf :">
+                                    <option value="6">Tout sauf l'option 1</option>
+                                    <option value="7">Tout sauf l'option 2</option>
+                                    <option value="8">Tout sauf l'option 3</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <div class="info-form" id="info-type-demande">
+                            Vous devez sélectionner un type de demande.
+                        </div>
+                        <p>
+                            Vous représentez : 
+                        </p>
+                        <p class="form-check-radio">
+                            <input type="radio" name="personne" id="physique" value="physique" checked /> <Label for="physique">Personne physique (Particulier)</Label> <br />
+                            <input type="radio" name="personne" id="morale" value="morale" /> <Label for="morale">Personne morale (entreprise, asso, etc.)</Label> <br />
+                        </p>
+                        <p>
+                            <label>Type de diffusion</label>
+                        </p>
+                        <p class="form-check-radio">
+                            <input type="checkbox" name="diff-email" id="diff-email" /> <label for="diff-email">Campagne d'emailing</label> <br />
+                            <input type="checkbox" name="diff-telephone" id="diff-telephone" /> <label for="diff-telephone">Télé-opérateurs</label> <br />
+                            <input type="checkbox" name="diff-radio" id="diff-radio" /> <label for="diff-radio">Publicités radiophonique</label> <br />
+                            <input type="checkbox" name="diff-tele" id="diff-tele" /> <label for="diff-tele">Publicités télévisuelles</label> <br />
+                        </p>
+                        <p>
+                            <input type="range" name="range" id="range" min="0" max="10" step="0.5" value="5" /> <span id="rangeValue">5</span>
+                            <script>
+                                const range = document.getElementById('range');
+                                const rangeValue = document.getElementById('rangeValue');
+                                range.addEventListener('change', function(){
+                                    rangeValue.innerHTML = range.value;
+                                });
+                            </script>
+                        </p>
+                        <p>
+                            <input type="color" name="color" id="color" /> <span id="colorValue">#000000</span>
+                            <script>
+                                const color = document.getElementById('color');
+                                const colorValue = document.getElementById('colorValue');
+                                color.addEventListener('change', function(){
+                                    colorValue.innerHTML = color.value;
+                                });
+                            </script>
+                        </p>
+                    </fieldset>
                     <p>
                         <button type="submit">Envoyer</button>
                         <button type="reset">Valeurs par défaut</button>
