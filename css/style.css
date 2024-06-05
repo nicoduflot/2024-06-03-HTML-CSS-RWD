@@ -194,6 +194,23 @@ style="position: absolute; height: 100%; width: 100%;"
     position: absolute; height: 100%; width: 100%;
 }
 
+.exemple-display-flex{
+    border: 2px solid black;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.div-flex{
+    border: 2px solid black;
+    width: 100%;
+    height: 75px;
+    margin: 0.2rem;
+}
+
 #contact-form fieldset,
 #contact-form legend{
     border: 2px solid rgb(99, 99, 99);
@@ -332,4 +349,95 @@ body > footer a:visited{
 body > main{
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+/* je déclare ici le comportement des éléments qui seront impactés par les média querie : header, main et footer */
+
+body > header > div,
+body > nav > div,
+body > main,
+body > footer > div{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* media queries */
+
+@media ( min-width: 576px ){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 540px;
+    }
+
+    .div-flex{
+        width: calc( 50% - 0.4rem);
+    }
+}
+
+@media ( min-width: 768px ){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 720px;
+    }
+    
+    .div-flex{
+        width: calc( (100% / 3) - 0.4rem);
+    }
+}
+
+@media ( min-width: 992px ){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 960px;
+    }
+
+    .div-flex{
+        width: calc( 20% - 0.4rem);
+    }
+}
+
+@media ( min-width: 1200px ){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 1140px;
+    }
+
+    .div-flex{
+        width: calc( (100% / 6) - 0.4rem);
+    }
+}
+
+@media ( min-width: 1400px ){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 1320px;
+    }
+
+    .div-flex{
+        width: calc( (100% / 7) - 0.4rem);
+    }
+}
+
+@media ( min-width: 1600px ){
+    body > header > div,
+    body > nav > div,
+    body > main,
+    body > footer > div{
+        width: 1560px;
+    }
+
+    .div-flex{
+        width: calc( (100% / 8) - 0.4rem);
+    }
 }

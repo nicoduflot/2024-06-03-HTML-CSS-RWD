@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test css</title>
+    <style>
+        :root{
+    --main-font: Arial, Helvetica, sans-serif;
+    --heading-font: sans-serif;
+    --main-body-color: #212529;
+    --header-bg-color: #212529;
+    --header-color: white;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+}
+
+/* déclarations générales */
+
+/* le sélecteur * permet d'atteindre tous les éléments de la page sans exception */
+
+*{
+    box-sizing: border-box;
+}
+
+/* pour "atteindre" en CSS une balise, on écrit simplement son nom */
+
+body{
+    font-family: var(--main-font);
+    margin: 0;
+    color: var(--main-body-color);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+body > nav ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+body > nav ul li{
+    float:left;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+body > nav ul.search li{
+    float:right;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+body > main{
+    clear: both;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Test CSS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="./index.html">retour au site</a></li>
+            <li>toto 02</li>
+            <li>toto 03</li>
+            <li>toto 04</li>
+            <li>toto 05</li>
+        </ul>
+        <ul class="search">
+            <li><form><input type="text" /><button type="submi">Search</button></form></li>
+        </ul>
+    </nav>
+    <main>
+        <article>
+            <header>
+                <h2>TOTO</h2>
+            </header>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias maxime quisquam beatae tempore! Sed tempore explicabo veritatis quos quisquam? Repellendus quod magnam odit quibusdam recusandae facere a doloremque rem necessitatibus.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, fugit error, nulla temporibus doloremque, totam optio numquam doloribus consectetur maiores voluptatum libero qui repudiandae animi suscipit eum quibusdam voluptate quia.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus recusandae officiis qui, nisi similique ipsum magnam eligendi exercitationem. Aliquid possimus maxime voluptas quam, sed sunt necessitatibus cupiditate voluptatibus fugiat corrupti!
+            </p>
+        </article>
+    </main>
+</body>
+</html>
