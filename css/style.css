@@ -193,6 +193,18 @@ style="position: absolute; height: 100%; width: 100%;"
     position: absolute; height: 100%; width: 100%;
 }
 
+#contact-form input[type="text"],
+#contact-form select
+{
+    height: 1.7rem;
+    font-size: 1rem;
+}
+
+/*#contact-form input[type="radio"],
+#contact-form input[type="checkbox"]{
+    
+}*/
+
 /* déclaration selon la structure du HTML */
 
 body > header, 
