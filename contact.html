@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="descrition" content="Formation HTML CSS RWD. Première page de la formation" />
+    <meta name="keywords" content="DAWAN, Formation, HTML, CSS, Responsive web design" />
+    <title>Formation HTML CSS RWD - DAWAN</title>
+    <!-- on va ajouter à la suite les appel vers les feuillets CSS -->
+
+    <link rel="stylesheet" href="./css/style.css" media="screen" />
+    <link rel="stylesheet" href="./css/print.css" media="print" />
+    <!-- on va ajouter à la suite les appel vers les scripts javascript -->
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Formation HTML CSS RWD </h1>
+        </div>
+    </header>
+    <nav>
+        <div>
+            <ul>
+                <li><a href="./index.html" title="Page d'accueil" target="_self">Accueil</a></li>
+                <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024" target="_blank">Promo 2024</a></li>
+                <li><a href="./media.html" title="Les media en html" target="_self">Les media</a></li>
+                <li><a href="./contact.html" title="Accès au formulaire de contact" target="_self">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <aside>
+                <b>Table des matières</b>
+                <ol type="I">
+
+                </ol>
+            </aside>
+        </section>
+        <section>
+            <article>
+                <header>
+                    <h2>Les formulaires</h2>
+                </header>
+                <p>
+                    Les formulaires servent a récupérer des informations pour traitement, par exemple, un serveur
+                    php qui pourra les enregistrer en fichier, en bdd, ou les envoyer par mail.
+                </p>
+                <p>
+                    Un formulaire se déclare à l'aide de la balise form. Il possède des
+                    attributs,
+                    dont les plus courants et importants sont : method & action
+                </p>
+                <h3>method</h3>
+                <p>
+                    C'est la méthode d'envoi des informations du formulaire, il en existe deux :
+                </p>
+                <ul>
+                    <li>GET : les données sont envoyées associées à des
+                        noms de variables dans l'url de la page de traitement</li>
+                    <li>POST : Les données sont transmises en variables dans
+                        l'entête HTTP.
+                    </li>
+                </ul>
+                <p>
+                    Si la méthode n'est pas indiquée dans le formulaire,
+                    c'est GET qui sera utilisé par défaut
+                </p>
+                <h3>Action</h3>
+                <p>
+                    Indique l'url de la page de traitement des données envoyées par le formulaire.
+                    Si action n'est pas précisé, le formulaire considère que c'est la page où il
+                    se trouve qui sera la page de traitement.
+                </p>
+                <form method="get" accept="./contact.html">
+                    
+                    <p>
+                        <button type="submit">Envoyer</button>
+                        <button type="reset">Valeurs par défaut</button>
+                        <button type="button">Ce bouton ne fait rien</button>
+                    </p>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <div>
+            &copy; - DAWAN
+        </div>
+        <div>
+            <nav>
+                <h4>Liens utiles</h4>
+                <ul>
+                    <li><a href="https://nouvelle-techno.fr/articles/utiliser-emmet-pour-accelerer-le-developpement"
+                            target="_blank" title="Utiliser l'abrévation Emmet">Emmet abreviation</a></li>
+                    <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"
+                            title="Documentation CSS sur le mdn ">CSS MDN</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <h4>Partenaires</h4>
+                <ul>
+                    <li><a href="#" title="lien 1" id="test">Lien 1</a></li>
+                    <li><a href="#" title="lien 2" id="test2">Lien 2</a></li>
+                    <li><a href="#" title="lien 3">Lien 3</a></li>
+                    <li><a href="#" title="lien 4">Lien 4</a></li>
+                </ul>
+                <script>
+                    const test = document.getElementById('test');
+                    test.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        console.log('coucou');
+                    });
+                    const test2 = document.getElementById('test2');
+                    test2.addEventListener('click', function (event) {
+                        event.preventDefault();
+                        alert('vous avez cliqué sur un lien');
+                    });
+                </script>
+            </nav>
+        </div>
+    </footer>
+</body>
+
+</html>
