@@ -214,6 +214,19 @@ style="position: absolute; height: 100%; width: 100%;"
     font-size: 1rem;
 }
 
+#contact-form textarea{
+    border: 2px solid rgb(99, 99, 99);
+    border-radius: 0.2rem;
+    margin-top: 0.5rem;
+    max-height: 400px;
+}
+
+#contact-form .limit-form{
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 #contact-form .info-form::before{
     font-family: "bootstrap-icons";
     content: "\F430";
@@ -238,6 +251,7 @@ style="position: absolute; height: 100%; width: 100%;"
     margin-bottom: 0.2rem;
     background-color: transparent;
     border-radius: 0.2rem;
+    cursor: pointer;
 }
 
 #contact-form button[type="submit"]{
@@ -245,14 +259,29 @@ style="position: absolute; height: 100%; width: 100%;"
     color: darkgreen;
 }
 
+#contact-form button[type="submit"]:hover{
+    background-color: darkgreen;
+    color: white;
+}
+
 #contact-form button[type="reset"]{
     border: 2px solid rgb(205, 55, 1);
     color: rgb(205, 55, 1);
 }
 
+#contact-form button[type="reset"]:hover{
+    background-color: rgb(205, 55, 1);
+    color: white;
+}
+
 #contact-form button[type="button"]{
     border: 2px solid rgb(99, 99, 99);
     color: rgb(99, 99, 99);
+}
+
+#contact-form button[type="button"]:hover{
+    background-color: rgb(99, 99, 99);
+    color: white;
 }
 
 /*#contact-form input[type="radio"],
