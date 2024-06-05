@@ -156,8 +156,11 @@
                     <li><a href="./documents/CRAM.pdf" target="document">fichier CRAM</a></li>
                     <li><a href="./documents/books.xml" target="document">fichier xml</a></li>
                     <li><a href="./documents/fichier.txt" target="document">fichier txt</a></li>
+                    <li><a href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1465583221&color=%23167142&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true" target="document">Album Lizzo</a></li>
                 </ul>
-                <iframe name="document" width="80%" height="400px" src="./documents/CRAM.pdf"></iframe>
+                <div class="video a-4-portrait">
+                    <iframe frameborder="no" name="document" width="80%" height="400px" src="./documents/CRAM.pdf"></iframe>
+                </div>
             </article>
             <article>
                 <header>
@@ -176,8 +179,22 @@
                         <source src="./media/video/Big_Buck_Bunny_360_10s_1MB.webm" type="video/webm" />
                     </video>
                 </figure>
-            </article>
-        </section>
+                <h3>Les vidéos hébergées sur un site tiers</h3>
+                <h4>Youtube</h4>
+                <p>
+                    Les vidéo hébergées posent souvent une défi : les tailles de l'iframe sont bloquée pour pouvoir profiter du ratio de la vidéo (16 / 9, ou du 4 / 3).
+                    Il faut créer des classes CSS particulières pour pouvoir ajouter des vidéos via iframe qui gardent leur ratio tout en étant adaptatives.
+                </p>
+                <figure>
+                    <div class="video video-16-9">
+                        <iframe   src="https://www.youtube.com/embed/5e5Pz7wnsFs?si=BRNRJfs7yyZGD9L0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <figcaption>
+                        Musique cool pour travailler
+                    </figcaption>
+                </figure>
+                </article>
+            </section>
     </main>
     <footer>
         <div>
