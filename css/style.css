@@ -120,11 +120,11 @@ body{
 }
 
 article, aside{
-    border: 1px solid black;;
+    /* border: 1px solid black; */
 }
 
 section{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -132,7 +132,7 @@ h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 
-img{
+img, video{
     max-width: 100%;
 }
 
@@ -218,6 +218,8 @@ style="position: absolute; height: 100%; width: 100%;"
     height: 75px;
     margin: 0.2rem;
 }
+
+
 
 #contact-form fieldset,
 #contact-form legend{
@@ -391,6 +393,13 @@ body > footer > div{
     .div-flex{
         width: calc( 50% - 0.4rem);
     }
+
+    /* comment identifier les nièmes enfants d'un block ? */
+
+    .div-flex:nth-child(2n+1):last-child{
+        border-color: red;
+        width: 100%;
+    }
 }
 
 @media ( min-width: 768px ){
@@ -400,9 +409,15 @@ body > footer > div{
     body > footer > div{
         width: 720px;
     }
+
     
     .div-flex{
         width: calc( (100% / 3) - 0.4rem);
+    }
+    
+    .div-flex:nth-child(3n+2):last-child{
+        border-color: red;
+        width: calc( ((100% / 3) * 2) - 0.4rem);
     }
 
     /* c'est à ce point de rutpure que l'on change la disposition de la navigation du site */
@@ -429,6 +444,12 @@ body > footer > div{
         padding-left: 1rem;
         padding-right: 1rem;
     }
+
+    #contact-form{
+        width: 576px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 @media ( min-width: 992px ){
@@ -439,9 +460,34 @@ body > footer > div{
         width: 960px;
     }
 
-    .div-flex{
-        width: calc( 20% - 0.4rem);
+    .div-flex:nth-child(4n+2):last-child{
+        border-color: red;
+        width: calc( 50% - 0.4rem);
     }
+
+    .div-flex{
+        width: calc( 25% - 0.4rem);
+    }
+
+    main > section:first-child{
+        margin-top: 1rem;
+    }
+
+    section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    article{
+        width: calc( 50% - 0.5rem);
+    }
+
+    article:nth-child(2n+1):last-child{
+        width: 100%;
+    }
+    
 }
 
 @media ( min-width: 1200px ){
@@ -453,7 +499,23 @@ body > footer > div{
     }
 
     .div-flex{
-        width: calc( (100% / 6) - 0.4rem);
+        width: calc( 20% - 0.4rem);
+    }
+
+    article:nth-child(2n+1):last-child{
+        width: calc( (100% / 3) - 0.5rem);
+    }
+
+    article{
+        width: calc( (100% / 3) - 0.5rem);
+    }
+
+    article:nth-child(3n+1):last-child{
+        width: 100%;
+    }
+    
+    article:nth-child(3n+2):last-child{
+        width: calc( ((100% / 3) * 2) - 0.5rem);
     }
 }
 
@@ -466,7 +528,7 @@ body > footer > div{
     }
 
     .div-flex{
-        width: calc( (100% / 7) - 0.4rem);
+        width: calc( (100% / 6) - 0.4rem);
     }
 }
 
@@ -479,6 +541,6 @@ body > footer > div{
     }
 
     .div-flex{
-        width: calc( (100% / 8) - 0.4rem);
+        width: calc( (100% / 7) - 0.4rem);
     }
 }
