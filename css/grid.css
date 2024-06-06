@@ -1,4 +1,7 @@
 /* définition de la structure smartphone de l'espace grille */
+:root{
+    --darkgreen : #072620;
+}
 
 .espace-grille{
     display: grid;
@@ -9,11 +12,34 @@
 /* définition de l'aspect d'une div de la grille */
 
 .espace-grille > *{
-    --darkgreen : #072620;
     border: 3px solid var(--darkgreen);
     margin: 0;
     padding: 0.2rem;
     border-radius: 0.2rem;
+}
+
+.row-2{
+    grid-row: span 2;
+}
+
+.row-3{
+    grid-row: span 3;
+}
+
+.grid-region{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "entete"
+    "navigation"
+    "toto"
+    "contenu"
+    "pied"
+    ;
+}
+
+.grid-region > *{
+    border: 1px solid var(--darkgreen);
 }
 
 
@@ -21,23 +47,102 @@
     .espace-grille{
         grid-template-columns: 1fr 1fr;
     }
+    
+    .col-sm-1{
+        grid-column: span 1;
+    }
+    
+    .col-sm-2{
+        grid-column: span 2;
+    }
 }
 
 @media (min-width: 768px) {
     .espace-grille{
         grid-template-columns: 1fr 2fr 1fr;
     }
+
+    .col-md-1{
+        grid-column: span 1;
+    }
+    
+    .col-md-2{
+        grid-column: span 2;
+    }
+    
+    .col-md-3{
+        grid-column: span 3;
+    }
+
 }
 
 @media (min-width: 992px) {
     .espace-grille{
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .col-lg-1{
+        grid-column: span 1;
+    }
+    
+    .col-lg-2{
+        grid-column: span 2;
+    }
+    
+    .col-lg-3{
+        grid-column: span 3;
+    }
+
+    .grid-region{
+        grid-template-columns: 250px 1fr 50px;
+        grid-template-areas: 
+        "entete entete entete"
+        "navigation contenu toto"
+        "pied pied pied"
+        ;
+    }
+
+    #entete{
+        grid-area: entete;
+    }
+    
+    #navigation{
+        grid-area: navigation;
+    }
+
+    #toto{
+        grid-area: toto;
+    }
+
+    #contenu{
+        grid-area: contenu;
+    }
+
+    #pied{
+        grid-area: pied;
+    }
+
 }
 
 @media (min-width: 1200px) {
     .espace-grille{
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .col-xl-1{
+        grid-column: span 1;
+    }
+    
+    .col-xl-2{
+        grid-column: span 2;
+    }
+    
+    .col-xl-3{
+        grid-column: span 3;
+    }
+    
+    .col-xl-4{
+        grid-column: span 4;
     }
 }
 

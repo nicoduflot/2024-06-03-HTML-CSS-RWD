@@ -25,12 +25,18 @@
     <nav>
         <div>
             <ul>
-                <li><a href="./index.html" title="Page d'accueil" target="_self"><i class="bi bi-house-door-fill"></i> Accueil</a></li>
-                <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024" target="_blank"><i class="bi bi-bag-fill"></i> Promo</a></li>
-                <li><a href="./media.html" title="Les media en html" target="_self"><i class="bi bi-film"></i> Les media</a></li>
-                <li><a href="./contact.html" title="Accès au formulaire de contact" target="_self"><i class="bi bi-envelope-fill"></i> Contact</a></li>
-                <li><a href="./animations.html" title="Accès au animations CSS" target="_self"><i class="bi bi-film"></i> Animations CSS</a></li>
-                <li><a href="./grid.html" title="Accès au CSS grid" target="_self"><i class="bi bi-grid-3x3"></i> Grilles CSS</a></li>
+                <li><a href="./index.html" title="Page d'accueil" target="_self"><i class="bi bi-house-door-fill"></i>
+                        Accueil</a></li>
+                <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024"
+                        target="_blank"><i class="bi bi-bag-fill"></i> Promo</a></li>
+                <li><a href="./media.html" title="Les media en html" target="_self"><i class="bi bi-film"></i> Les
+                        media</a></li>
+                <li><a href="./contact.html" title="Accès au formulaire de contact" target="_self"><i
+                            class="bi bi-envelope-fill"></i> Contact</a></li>
+                <li><a href="./animations.html" title="Accès au animations CSS" target="_self"><i
+                            class="bi bi-film"></i> Animations CSS</a></li>
+                <li><a href="./grid.html" title="Accès au CSS grid" target="_self"><i class="bi bi-grid-3x3"></i>
+                        Grilles CSS</a></li>
             </ul>
         </div>
     </nav>
@@ -38,15 +44,54 @@
         <section>
             <article>
                 <header>
-                    <h2>Les grilles CSS</h2>
+                    <h2 id="grid">Les grilles CSS avec grid</h2>
                 </header>
+                <h3>La base des grilles</h3>
+                <p>
+                    La propriété <code>grid</code> permet de transformer l'élément qui la possède en une grille.
+                </p>
+                <p>
+                    Il faut ensuite définir le comportement de la grille :
+                </p>
+                <ul>
+                    <li>Le modèle des colonnes</li>
+                    <li>Les espaces (goutières) entre les éléments de la grille</li>
+                    <li>La hauteur minimale, maximale ou automatique des lignes</li>
+                    <li>
+                        <a href="https://developer.mozilla.org/fr/docs/Web/CSS/grid" target="_blank">
+                            Plus d'information sur la définition des grilles.
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    On applique le display grid à <code>div class="espace-grille"</code>. Ensuite, avec
+                    <code>grid-template-columns</code> on indique le nombre de fractions horizontales appliqué à
+                    <code>div class="espace-grille"</code>, ici, une seule fraction (1fr => une colonne). Enfin, une
+                    goutière (gap) de 0.5rem entre les éléments de la grille.
+                </p>
+                <p class="code">
+                    espace-grille{<br />
+                    &nbsp;&nbsp;display: grid;<br />
+                    &nbsp;&nbsp;margin: 0;<br />
+                    &nbsp;&nbsp;grid-template-columns: 1fr;<br />
+                    &nbsp;&nbsp;gap: 0.5rem;<br />
+                    }
+                </p>
+                <p>
+                    Une fois que cela est défini, chaque élément enfant direct de body s'affichera sur une colonne.
+                </p>
                 <div class="espace-grille">
-                    <div class="grid-div">
+                    <div class="grid-div col-sm-2 col-md-3 col-lg-3 col-xl-4">
                         <h3>01</h3>
                         <p>la div n° 01</p>
                     </div>
-                    <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" />
-                    <div class="grid-div">
+                    <figure>
+                        <img src="./images/cropped-wallhaven-fallout-4-01-3-1536x922.jpg" />
+                        <figcaption>
+                            <small>Fond d'écran inspiration fallout 4</small>
+                        </figcaption>
+                    </figure>
+                    <div class="grid-div col-md-2">
                         <h3>02</h3>
                         <p>la div n° 02</p>
                     </div>
@@ -58,12 +103,14 @@
                         <h3>04</h3>
                         <p>la div n° 04</p>
                     </div>
-                    <div class="grid-div">
+                    <div class="grid-div row-2">
                         <h3>05</h3>
                         <p>la div n° 05</p>
                     </div>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum aut libero consequuntur doloribus ea quam harum velit explicabo, hic facilis rem dolorum eveniet iure earum quasi a enim illo officia?
+                    <p class="col-md-2">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum aut libero consequuntur
+                        doloribus ea quam harum velit explicabo, hic facilis rem dolorum eveniet iure earum quasi a enim
+                        illo officia?
                     </p>
                     <div class="grid-div">
                         <h3>06</h3>
@@ -81,7 +128,7 @@
                         <h3>09</h3>
                         <p>la div n° 09</p>
                     </div>
-                    <div class="grid-div">
+                    <div class="grid-div col-xl-2">
                         <h3>10</h3>
                         <p>la div n° 10</p>
                     </div>
@@ -89,7 +136,7 @@
                         <h3>11</h3>
                         <p>la div n° 11</p>
                     </div>
-                    <div class="grid-div">
+                    <div class="grid-div col-xl-2">
                         <h3>12</h3>
                         <p>la div n° 12</p>
                     </div>
@@ -101,21 +148,56 @@
                         <h3>14</h3>
                         <p>la div n° 14</p>
                     </div>
-                    <div class="grid-div">
+                    <div class="grid-div col-xl-2">
                         <h3>15</h3>
                         <p>la div n° 15</p>
                     </div>
-                    <div class="grid-div">
+                    <div class="grid-div col-md-2">
                         <h3>16</h3>
                         <p>la div n° 16</p>
                     </div>
-                    <div class="grid-div">
+                    <div class="grid-div col-md-2 col-xl-3">
                         <h3>17</h3>
                         <p>la div n° 17</p>
                     </div>
                     <div class="grid-div">
                         <h3>18</h3>
                         <p>la div n° 18</p>
+                    </div>
+                </div>
+                <h3>Utiliser  les régions de grille</h3>
+                <div class="grid-region">
+                    <div id="entete">
+                        <h2>titre</h2>
+                    </div>
+                    <div id="navigation">
+                        <ul>
+                            <li><a href="#">lien truc</a></li>
+                            <li><a href="#">lien truc</a></li>
+                            <li><a href="#">lien truc</a></li>
+                            <li><a href="#">lien truc</a></li>
+                            <li><a href="#">lien truc</a></li>
+                        </ul>
+                    </div>
+                    <div id="toto">
+                        toto
+                    </div>
+                    <div id="contenu">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsam quo veritatis eaque earum praesentium tempora, corporis, reiciendis cum debitis ut repellendus necessitatibus accusamus. Maiores quos delectus dolorem a expedita!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo voluptatibus unde qui voluptatum nulla aut voluptate, magni, recusandae adipisci reprehenderit itaque nostrum laborum ipsum temporibus id quis, similique molestiae ut?
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis ipsam quo veritatis eaque earum praesentium tempora, corporis, reiciendis cum debitis ut repellendus necessitatibus accusamus. Maiores quos delectus dolorem a expedita!
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo voluptatibus unde qui voluptatum nulla aut voluptate, magni, recusandae adipisci reprehenderit itaque nostrum laborum ipsum temporibus id quis, similique molestiae ut?
+                        </p>
+                    </div>
+                    <div id="pied">
+                        &copy; - DAWAN 2024
                     </div>
                 </div>
             </article>
