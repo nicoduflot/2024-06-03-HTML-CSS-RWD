@@ -1,0 +1,14 @@
+/* définition de la structure smartphone de l'espace grille */
+
+.espace-grille{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+/* définition de l'aspect d'une div de la grille */
+
+.grid-div{
+    --darkgreen : #072620;
+    border: 3px solid var(--darkgreen);
+}
