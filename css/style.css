@@ -119,6 +119,14 @@ body{
     color: var(--main-body-color);
 }
 
+article, aside{
+    border: 1px solid black;;
+}
+
+section{
+    border: 1px solid red;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: var(--heading-font);
     margin: 0;
@@ -346,6 +354,14 @@ body > footer a:visited{
     text-decoration: none;
 }
 
+body > nav a:hover, 
+body > nav a:visited:hover,
+body > nav a:focus
+{
+    background-color: var(--header-color);
+    color: var(--header-bg-color);
+}
+
 body > main{
     padding-left: 1rem;
     padding-right: 1rem;
@@ -387,6 +403,31 @@ body > footer > div{
     
     .div-flex{
         width: calc( (100% / 3) - 0.4rem);
+    }
+
+    /* c'est à ce point de rutpure que l'on change la disposition de la navigation du site */
+    body > nav ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    body > nav ul li:not(body > nav ul li:last-child){
+        border-bottom: unset;
+    }
+
+    body > nav ul li{
+        border-left: 1px solid var(--header-color);
+    }
+    
+    body > nav ul li:last-child{
+        border-right: 1px solid var(--header-color);
+    }
+
+    body > nav ul li a, 
+    body > nav ul li a:visited
+    {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 }
 
