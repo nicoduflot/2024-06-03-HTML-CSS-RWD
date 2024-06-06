@@ -80,7 +80,7 @@
     animation-timing-function   : la vitesse constante ou non de l'animation
     animation-delay             : le délais avant que l'animation soit jouée
     animation-iteration-count   : le nombre de fois que se joue l'animation
-    animation-diraction         : le "sens" de l'animation (on commence par la première vers la dernière image clef ou l'inverse) 
+    animation-direction         : le "sens" de l'animation (on commence par la première vers la dernière image clef ou l'inverse) 
     */
     animation-name: fleche-qui-bouge;
     animation-timing-function: ease;
@@ -112,5 +112,76 @@
         left: 0%;
         top: 25%;
         transform: rotate(-360deg);
+    }
+}
+
+.cadre{
+    width: 100%;
+    --darkgreen : #072620;
+    border: 1px solid var(--darkgreen);
+    margin: 0.5rem 0;
+    padding: 0.2rem;
+    height: auto;
+}
+
+.chargement{
+    height: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.charge-01{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s infinite ease-in alternate;
+}
+
+.charge-02{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s 0.2s infinite ease-in-out alternate;
+}
+
+.charge-03{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s 0.2s infinite ease alternate;
+}
+
+.charge-04{
+    width: 100%;
+    height: 100%;
+    background-color: var(--darkgreen);
+    transform-origin: left center;
+    animation: chargement 3s 1 steps(10) alternate;
+}
+
+@keyframes chargement {
+    from{
+        transform: scaleX(0);
+    }
+    to{
+        transform: scaleX(1);
+    }
+}
+
+.clignotant{
+    animation: clignoter 0.8s infinite;
+}
+
+@keyframes clignoter {
+    0%{
+        opacity: 1;
+    }
+    40%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
