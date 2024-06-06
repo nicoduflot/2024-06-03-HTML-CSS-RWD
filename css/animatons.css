@@ -7,3 +7,37 @@
     box-shadow: 5px 5px black;
     border: 3px dashed darkgreen;
 }
+
+.scale-up{
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-delay: 0.2s;
+    transition-timing-function: ease;
+    transform-origin: left;
+    /*
+    transition: transform 0.5s 0.2s ease;
+    */
+}
+
+.scale-up:hover{
+    transform: scale(1.2);
+}
+
+.table-exemple{
+    border-collapse: collapse;
+}
+
+.table-exemple td,
+.table-exemple th{
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+
+.exo-anim{
+    border-collapse: collapse;
+}
+
+.exo-anim td{
+    border: 1px solid black;
+    padding: 0.5rem;
+}
