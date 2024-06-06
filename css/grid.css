@@ -2,13 +2,53 @@
 
 .espace-grille{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 0.5rem;
 }
 
 /* définition de l'aspect d'une div de la grille */
 
-.grid-div{
+.espace-grille > *{
     --darkgreen : #072620;
     border: 3px solid var(--darkgreen);
+    margin: 0;
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+}
+
+
+@media (min-width: 576px) {
+    .espace-grille{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 768px) {
+    .espace-grille{
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+}
+
+@media (min-width: 992px) {
+    .espace-grille{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1200px) {
+    .espace-grille{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1400px) {
+    .espace-grille{
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1400px) {
+    .espace-grille{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
