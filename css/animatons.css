@@ -1,0 +1,9 @@
+.translation{
+    transition: transform 2s, box-shadow 2s;
+}
+
+.translation:hover{
+    transform: translate(10px, 10px);
+    box-shadow: 5px 5px black;
+    border: 3px dashed darkgreen;
+}

@@ -356,6 +356,11 @@ body > footer a:visited{
     text-decoration: none;
 }
 
+body > nav a, 
+body > nav a:visited{
+    transition: background-color 0.5s, color 0.5s;
+}
+
 body > nav a:hover, 
 body > nav a:visited:hover,
 body > nav a:focus
