@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap</title>
+    <!-- intégrons le css de bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/bootstrap-icons.css" />
+    <!-- intégrons le JS de bootstrap -->
+    <script src="./js/bootstrap.bundle.js"></script>
+    <style>
+        .borders {
+            border: 1px solid black;
+        }
+    </style>
 </head>
+
 <body>
     <header>
-        <div>
+        <div class="container">
             <h1>Formation HTML CSS RWD </h1>
         </div>
     </header>
     <nav>
-        <div>
+        <div class="container">
             <ul>
-                <li><a href="./index.html" title="Page d'accueil" target="_self"><i class="bi bi-house-door-fill"></i> Accueil</a></li>
-                <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024" target="_blank"><i class="bi bi-bag-fill"></i> Promo</a></li>
-                <li><a href="./media.html" title="Les media en html" target="_self"><i class="bi bi-film"></i> Les media</a></li>
-                <li><a href="./contact.html" title="Accès au formulaire de contact" target="_self"><i class="bi bi-envelope-fill"></i> Contact</a></li>
-                <li><a href="./animations.html" title="Accès aux animations CSS" target="_self"><i class="bi bi-film"></i> Animations CSS</a></li>
-                <li><a href="./grid.html" title="Accès au CSS grid" target="_self"><i class="bi bi-grid-3x3"></i> Grilles CSS</a></li>
-                <li><a href="./design-css.html" title="Accès à la page de création en CSS" target="_self"><i class="bi bi-brush-fill"></i> Design CSS</a></li>
-                <li><a href="./bootstrap.html" title="Accès à la page Bootstrap" target="_self"><i class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
+                <li><a href="./index.html" title="Page d'accueil" target="_self"><i class="bi bi-house-door-fill"></i>
+                        Accueil</a></li>
+                <li><a href="./landings/promo-summer-2024.html" title="Landing page des promos été 2024"
+                        target="_blank"><i class="bi bi-bag-fill"></i> Promo</a></li>
+                <li><a href="./media.html" title="Les media en html" target="_self"><i class="bi bi-film"></i> Les
+                        media</a></li>
+                <li><a href="./contact.html" title="Accès au formulaire de contact" target="_self"><i
+                            class="bi bi-envelope-fill"></i> Contact</a></li>
+                <li><a href="./animations.html" title="Accès aux animations CSS" target="_self"><i
+                            class="bi bi-film"></i> Animations CSS</a></li>
+                <li><a href="./grid.html" title="Accès au CSS grid" target="_self"><i class="bi bi-grid-3x3"></i>
+                        Grilles CSS</a></li>
+                <li><a href="./design-css.html" title="Accès à la page de création en CSS" target="_self"><i
+                            class="bi bi-brush-fill"></i> Design CSS</a></li>
+                <li><a href="./bootstrap.html" title="Accès à la page Bootstrap" target="_self"><i
+                            class="bi bi-bootstrap-fill"></i> Bootstrap</a></li>
             </ul>
         </div>
     </nav>
-    <main>
+    <main class="container">
         <section>
             <aside>
                 <b>Table des matières</b>
                 <ol type="I">
-                    <li><a href="#balises-contenu" title="Aller à la partie 'Balises de contenu texte'">Les balises de contenu texte</a></li>
-                    <li><a href="#balises-texte" title="Aller à la partie balises texte">Les balises sur le texte</a></li>
-                    <li><a href="#problemes-en-css" title="Aller à la partie les problèmes courants en CSS">Les problèmes courant en CSS</a></li>
+                    <li><a href="#balises-contenu" title="Aller à la partie 'Balises de contenu texte'">Les balises de
+                            contenu texte</a></li>
+                    <li><a href="#balises-texte" title="Aller à la partie balises texte">Les balises sur le texte</a>
+                    </li>
+                    <li><a href="#problemes-en-css" title="Aller à la partie les problèmes courants en CSS">Les
+                            problèmes courant en CSS</a></li>
                     <li><a href="#css-adaptatif" title="Aller à la partie CSS adaptatif">CSS adaptatif</a></li>
                 </ol>
             </aside>
         </section>
+        <hr />
         <section>
             <article>
                 <header>
@@ -47,13 +71,14 @@
                     https://www.leptidigital.fr/productivite/caracteres-speciaux-html-2-19297/
                 -->
                 <p>
-                    Les texte doit toujours être contenu dans une balise paragraphe ou une balise similaire (je les appel des balise de type paragraphe).
+                    Les texte doit toujours être contenu dans une balise paragraphe ou une balise similaire (je les
+                    appel des balise de type paragraphe).
                 </p>
                 <p>
                     Si j'enchaîne les paragraphes, ils seront "naturellements" séparés.
                 </p>
                 <p>
-                    Les listes sont équivalentes à des paragraphes : 
+                    Les listes sont équivalentes à des paragraphes :
                 </p>
                 <ul>
                     <li>élément 1</li>
@@ -79,11 +104,16 @@ quod est.</pre>
                     <h2 id="balises-texte">Les balises sur le texte</h2>
                 </header>
                 <p>
-                    Sur la mise en forme du texte, il faudra faire attention, on peut utiliser plusieurs balises qui affichent le même résultat mais certaines d'entres elles on une influence sur le SEO. Par exemple la balise <b>b affiche le texte engras</b>, mais il est aussi possible d'utilser pour cela la balise <strong>strong</strong>.<br />
-                    Il existe la même différence entre la balise <i> i pour l'italique</i> et la balise <em> em, qui affiche en italique mais induit le fait de mettre de l'emphase sur l'importnce SEO de ce qu'elle contient</em>
+                    Sur la mise en forme du texte, il faudra faire attention, on peut utiliser plusieurs balises qui
+                    affichent le même résultat mais certaines d'entres elles on une influence sur le SEO. Par exemple la
+                    balise <b>b affiche le texte engras</b>, mais il est aussi possible d'utilser pour cela la balise
+                    <strong>strong</strong>.<br />
+                    Il existe la même différence entre la balise <i> i pour l'italique</i> et la balise <em> em, qui
+                        affiche en italique mais induit le fait de mettre de l'emphase sur l'importnce SEO de ce qu'elle
+                        contient</em>
                 </p>
                 <p>
-                    Pour avoir tous les éléments d'une citation, il faut ajouter, dans la balise blockquote : 
+                    Pour avoir tous les éléments d'une citation, il faut ajouter, dans la balise blockquote :
                 </p>
                 <ul>
                     <li>La balise q qui délimitera la citation</li>
@@ -94,19 +124,27 @@ quod est.</pre>
                     <cite>Bruce Wayne</cite>
                 </blockquote>
                 <p>
-                    Une balise a été rendue obsolète, elle permettait de changer la couleur, la police et la taille d'une zone de texte, la balise font. Elle est dépréciée, a ne plus utiliser mais elle est encore, pour l'instant (juin 2024) interprêtée par les navigateurs.
+                    Une balise a été rendue obsolète, elle permettait de changer la couleur, la police et la taille
+                    d'une zone de texte, la balise font. Elle est dépréciée, a ne plus utiliser mais elle est encore,
+                    pour l'instant (juin 2024) interprêtée par les navigateurs.
                 </p>
                 <p>
-                    Pour agir de la même façon, on créera plutôt une classe CSS, que l'on ajoutera à une balise span, span est une balise qui permet tout simplement d'entourer un groupe de mot et d'y appliquer une classe CSS.
+                    Pour agir de la même façon, on créera plutôt une classe CSS, que l'on ajoutera à une balise span,
+                    span est une balise qui permet tout simplement d'entourer un groupe de mot et d'y appliquer une
+                    classe CSS.
                 </p>
                 <p>
                     H<sub>2</sub>SO<sub>4</sub><sup>2-</sup>
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <small>Dignissimos aliquid recusandae</small> error nam assumenda nesciunt ipsa fuga. Fuga provident reiciendis, aut consectetur minima deserunt molestias voluptatem, laboriosam quo atque ratione?
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. <small>Dignissimos aliquid
+                        recusandae</small> error nam assumenda nesciunt ipsa fuga. Fuga provident reiciendis, aut
+                    consectetur minima deserunt molestias voluptatem, laboriosam quo atque ratione?
                 </p>
                 <p>
-                    En HTML, on ne <u>souligne pas du contenu</u>, car la majorité des personne pourraient penser que c'est un lien hypertexte qui ne marche pas. Il est préférable de soit changer sa couleur, <mark>soit le surligner au marker fluo</mark>. Il est possible aussi de <s>biffer</s> du texte.
+                    En HTML, on ne <u>souligne pas du contenu</u>, car la majorité des personne pourraient penser que
+                    c'est un lien hypertexte qui ne marche pas. Il est préférable de soit changer sa couleur, <mark>soit
+                        le surligner au marker fluo</mark>. Il est possible aussi de <s>biffer</s> du texte.
                 </p>
             </article>
         </section>
@@ -117,11 +155,14 @@ quod est.</pre>
                 </header>
                 <h3>Les polices sans empatement</h3>
                 <p>
-                    En web, pour l'accessibilité et la facilité de lecture, on évite les polices avec empatement (ex : Times New Roman ou police serif), on préfèrera les polices sans empatement ( Arial, Roboto, calibri ou police sans-serif).
+                    En web, pour l'accessibilité et la facilité de lecture, on évite les polices avec empatement (ex :
+                    Times New Roman ou police serif), on préfèrera les polices sans empatement ( Arial, Roboto, calibri
+                    ou police sans-serif).
                 </p>
                 <h3>une histoire d'unité</h3>
                 <p>
-                    Les tailles des éléments sont définis par défaut sur le contenu des éléments, c'est à dir que si je définie une div de 200px de large, avec une marge intérieure de 10px et une bordure de 1px
+                    Les tailles des éléments sont définis par défaut sur le contenu des éléments, c'est à dir que si je
+                    définie une div de 200px de large, avec une marge intérieure de 10px et une bordure de 1px
                     de large, la place totale de l'élément sur l'écran sera de :
                     200px + 10px + 10px + 1px + 1px (contenu + marge intérieur gauche + marge intérieur droite +
                     largeur bordure à gauche + largeur bordure à droite ) => 222px.<br />
@@ -136,7 +177,8 @@ quod est.</pre>
                 </h2>
                 <h3>Les media queries</h3>
                 <p>
-                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre autres, à l'affichage du site sur l'appareil.
+                    Les media queries permettent de surcharger ou d'ajouter des comportements CSS par rapport, entre
+                    autres, à l'affichage du site sur l'appareil.
                 </p>
                 <h3>La flexibilité : display: flex;</h3>
                 <p>
@@ -145,40 +187,119 @@ quod est.</pre>
                 <p>
                     Pour notre navigation, on utilise display:flex;
                 </p>
-                <div class="exemple-display-flex">
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
-                    <div class="div-flex">toto</div>
+                <div class="row">
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col-5">
+                        <div class="borders">toto</div>
+                    </div>
+                    <div class="col">
+                        <div class="borders">toto</div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-sm-8">
+                        <div class="borders">col-sm-8</div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="borders">col-sm-4</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="borders">col-sm</div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="borders">col-sm</div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="borders">col-sm</div>
+                    </div>
+                </div>
+                <hr />
+                <div class="my-2">
+                    <img src="./images/cropped-wallhaven-fallout-4-01-3-640x360.jpg" class="img-fluid" />
                 </div>
             </article>
             <article>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni inventore fugit tempora ipsum placeat laudantium, expedita molestias quod fuga dignissimos rerum eveniet aspernatur aperiam temporibus eaque! Facere incidunt doloremque distinctio!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni inventore fugit tempora ipsum placeat
+                    laudantium, expedita molestias quod fuga dignissimos rerum eveniet aspernatur aperiam temporibus
+                    eaque! Facere incidunt doloremque distinctio!
                 </p>
             </article>
         </section>
     </main>
     <footer>
-        <div>
+        <div class="container">
             &copy; - DAWAN
         </div>
-        <div>
+        <div class="container">
             <nav>
                 <h4>Liens utiles</h4>
                 <ul>
-                    <li><a href="https://nouvelle-techno.fr/articles/utiliser-emmet-pour-accelerer-le-developpement" target="_blank" title="Utiliser l'abrévation Emmet">Emmet abreviation</a></li>
-                    <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank" title="Documentation CSS sur le mdn ">CSS MDN</a></li>
+                    <li><a href="https://nouvelle-techno.fr/articles/utiliser-emmet-pour-accelerer-le-developpement"
+                            target="_blank" title="Utiliser l'abrévation Emmet">Emmet abreviation</a></li>
+                    <li><a href="https://developer.mozilla.org/fr/docs/Web/CSS" target="_blank"
+                            title="Documentation CSS sur le mdn ">CSS MDN</a></li>
                 </ul>
             </nav>
             <nav>
@@ -191,12 +312,12 @@ quod est.</pre>
                 </ul>
                 <script>
                     const test = document.getElementById('test');
-                    test.addEventListener('click', function(event){
+                    test.addEventListener('click', function (event) {
                         event.preventDefault();
                         console.log('coucou');
                     });
                     const test2 = document.getElementById('test2');
-                    test2.addEventListener('click', function(event){
+                    test2.addEventListener('click', function (event) {
                         event.preventDefault();
                         alert('vous avez cliqué sur un lien');
                     });
@@ -205,4 +326,5 @@ quod est.</pre>
         </div>
     </footer>
 </body>
+
 </html>
