@@ -52,3 +52,149 @@
     background-position-x: 50px;
     background-position-y: 50px;
 }
+
+.triangle-right{
+    --h-t: 2rem;
+    --b-t-w: calc(var(--h-t) / 2);
+    --b-b-w: calc(var(--h-t) / 2);
+    --b-l-w: calc(var(--h-t) * 0.866);
+    height: 0;
+    width: 0;
+    border-top-width: var(--b-t-w);
+    border-bottom-width: var(--b-b-w);
+    border-left-width: var(--b-l-w);
+    border-right-width: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+.darkred{
+    border-left-color: darkred;
+}
+
+p.intro::before{
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 0;
+    --taille-base: 1rem;
+    border-color: transparent;
+    border-style: solid;
+    border-left-width: calc( var(--taille-base) * 0.866);
+    border-right-width: 0;
+    border-top-width: calc( var(--taille-base) / 2);
+    border-bottom-width: calc( var(--taille-base) / 2);
+    border-left-color: darkred;
+}
+
+p.intro:nth-of-type(odd)::before{
+    border-left-color: darkgreen;
+}
+
+/* 
+HTML: <div class="ribbon">Your text content</div>
+
+from https://css-generators.com/ribbon-shapes/
+*/
+.ribbon {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .ribbon {
+    --f: .5em; /* control the folded part */
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 1.8;
+    padding-inline: 1lh;
+    padding-bottom: var(--f);
+    border-image: conic-gradient(#0008 0 0) 51%/var(--f);
+    clip-path: polygon(
+      100% calc(100% - var(--f)),100% 100%,calc(100% - var(--f)) calc(100% - var(--f)),var(--f) calc(100% - var(--f)), 0 100%,0 calc(100% - var(--f)),999px calc(100% - var(--f) - 999px),calc(100% - 999px) calc(100% - var(--f) - 999px));
+    transform: translate(calc((cos(45deg) - 1)*100%), -100%) rotate(-45deg);
+    transform-origin: 100% 100%;
+    background-color: #F07818; /* the main color  */
+  }
+
+  .text-shadow-blur{
+    width: 200px;
+    height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 4rem;
+    line-height: 4rem;
+    text-shadow: 0 0 10px black;
+  }
+  
+  .text-shadow-plain{
+    width: 200px;
+    height: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    line-height: 4rem;
+    font-size: 4rem;
+    text-shadow: 0.2rem 0.2rem black;
+  }
+
+.div-rel{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 1px solid black;
+}
+
+.carre-rouge{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(139, 0, 0, 0.5);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.carre-vert{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 100, 0, 1);
+}
+
+.ecusson{
+    position: relative;
+    width: 338px;
+    height: 338px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fg, .mg, .bg{
+    position: absolute;
+}
+
+.bg{
+    z-index: 1;
+}
+
+.mg{
+    z-index: 2;
+}
+
+.fg{
+    z-index: 3;
+}
+
+.text-fg{
+    position: absolute;
+    z-index: 4;
+    font-size: 4rem;
+    height: 338px;
+    width: 338px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 10px darkblue;
+}
